@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - TodoListo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex justify-center items-center h-screen">
+
+    <div class="bg-white w-full max-w-md p-8 rounded-lg shadow-lg overflow-y-auto max-h-screen">
+        <!-- Logo -->
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-extrabold text-teal-600">TodoListo</h1>
+            <p class="text-gray-600 text-sm">Crea una cuenta para comenzar a organizar tus tareas.</p>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <form class="space-y-4" id="register-form" onsubmit="registerForm(event)">
+            <!-- Nombre de usuario con @ al principio -->
+            <div class="relative">
+                <label for="username" class="block text-sm font-medium text-gray-700">Nombre de usuario</label>
+                <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                    <span class="px-3 text-gray-700">@</span>
+                    <input type="text" id="username" name="username" required 
+                           class="w-full px-4 py-2 border-0 focus:ring-teal-500 focus:border-teal-500">
+                </div>
+            </div>
+
+            <!-- Nombre completo -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Nombre completo</label>
+                <input type="text" id="name" name="name" required
+                       class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+            </div>
+
+            <!-- Correo Electrónico -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+                <input type="email" id="email" name="email"  required
+                       class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+            </div>
+
+            <!-- Contraseña -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                <input type="password" id="password" name="password" required 
+                       class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+            </div>
+
+            <!-- Confirmar Contraseña -->
+            <div>
+                <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirmar contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" required 
+                       class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+            </div>
+
+            <!-- Botón de Registro -->
+            <button type="submit" 
+                    class="w-full bg-teal-600 text-white font-semibold py-2 rounded-lg hover:bg-teal-700 transition">
+                Registrarse
+            </button>
+        </form>
+
+        <!-- Enlaces de ayuda -->
+        <div class="mt-6 text-center">
+            <p class="text-gray-600 text-sm">
+                ¿Ya tienes una cuenta? 
+                <a href="/login" class="text-teal-600 font-medium hover:underline">Inicia sesión</a>
+            </p>
+        </div>
+
+        <!-- Volver al inicio -->
+        <div class="mt-4 text-center">
+            <a href="/" class="text-teal-600 text-sm hover:underline">Volver a la página de inicio</a>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

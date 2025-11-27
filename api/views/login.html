@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TodoListo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex justify-center items-center h-screen">
+    <div class="bg-white w-full max-w-md p-8 rounded-lg shadow-lg">
+        <!-- Logo -->
+        <div class="text-center mb-6">
+            <h1 class="text-3xl font-extrabold text-teal-600">TodoListo</h1>
+            <p class="text-gray-600 text-sm">¡Bienvenido de nuevo! Por favor inicia sesión.</p>
+        </div>
+
+        <!-- Formulario de Login -->
+        <form id="login-form" class="space-y-6" onsubmit="dashboardRoute(event)">
+            <!-- Username -->
+            <div>
+                <label for="username" class="block text-sm font-medium text-gray-700">Nombre del usuario</label>
+                <input type="text" id="username" name="username" required 
+                       class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500"
+                       placeholder="Joe Doe">
+            </div>
+
+            <!-- Contraseña -->
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                <input type="password" id="password" name="password" required 
+                       class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-teal-500 focus:border-teal-500">
+            </div>
+
+            <!-- Botón de Login -->
+            <button type="submit" 
+                    class="w-full bg-teal-600 text-white font-semibold py-2 rounded-lg hover:bg-teal-700 transition">
+                Iniciar sesión
+            </button>
+        </form>
+
+        <!-- Enlaces de ayuda -->
+        <div class="mt-6 text-center">
+            <a href="/forgot-password" class="text-teal-600 text-sm hover:underline">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <!-- Enlace para registrarse -->
+        <div class="mt-4 text-center">
+            <p class="text-gray-600 text-sm">
+                ¿No tienes una cuenta? 
+                <a href="/register" class="text-teal-600 font-medium hover:underline">Regístrate</a>
+            </p>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

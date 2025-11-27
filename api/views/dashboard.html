@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - To-Do List</title>
+    <script src="https://kit.fontawesome.com/0c273bd24b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        #tarea-actualizar, #tarea-eliminar, #logout {
+            cursor: pointer;
+        }
+    </style>
+    <header class="bg-teal-600 text-white p-6 shadow-md flex justify-between items-center">
+        <a href="/" class="text-3xl font-semibold">TodoListo</a>
+        <button id="logout" class="text-black hover:text-teal-200" onclick="cerrarSesion()">
+            <i class="fa-solid fa-power-off pr-3"></i>Cerrar sesión
+        </button>
+    </header>
+    <h2 class="text-center text-lg font-semibold text-teal-600 mt-4">
+        Hoy es <span id="current-date" class="font-bold text-xl text-teal-800"></span>
+    </h2>
+    
+    <main class="flex flex-col lg:flex-row p-8 space-y-6 lg:space-x-8 lg:space-y-0">
+        <aside class="w-full lg:w-1/4 bg-teal-100 dark:bg-teal-800 p-6 rounded-lg shadow-md" id="diasSemana"></aside>
+
+        <section class="w-full lg:w-3/4 bg-white dark:bg-gray-800 dark:text-gray-200 p-8 rounded-xl shadow-lg space-y-6">
+            <h1 class="text-4xl font-bold text-center text-teal-600 dark:text-teal-300">Lista de tareas</h1>
+
+            <form id="task-form" class="flex flex-col lg:flex-row space-y-4 lg:space-x-4 lg:space-y-0 items-center">
+                <label for="task-input" class="sr-only">Escribe una tarea</label>
+                <input id="task-input" type="text" placeholder="Escribe una tarea..." class="dark:text-black w-full p-4 border-2 border-teal-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+
+                <label for="fecha" class="sr-only">Seleccionar fecha</label>
+                <input type="date" id="fecha" class="p-4 border-2 border-teal-300 rounded-lg dark:text-black">
+                
+                <button type="submit" class="w-full lg:w-36 bg-teal-600 text-white p-4 rounded-lg hover:bg-teal-700 transition-colors">Agregar</button>
+            </form>
+
+            <ul id="task-list" class="space-y-4" role="list"></ul>
+        </section>
+    </main>
+    <footer class="bg-gray-100 dark:bg-gray-700 text-center p-4 mt-8">
+        <p class="text-gray-600 dark:text-gray-300">&copy; <script>document.write(new Date().getFullYear())</script> ToDoApp. Todos los derechos reservados.</p>
+        <span class="text-red-500 cursor-pointer" onclick="deleteAccount()">Eliminar mi perfil</span>
+    </footer>
+    <script src="./js/main.js"></script>
+    <script>
+        document.getElementById("current-date").innerText = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

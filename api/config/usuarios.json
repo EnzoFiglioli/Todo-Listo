@@ -1,0 +1,88 @@
+[
+  {
+    "username": "Enzo",
+    "password": "password123",
+    "tareas": [
+      {
+        "incompletas": [
+          {
+            "id_task": 1,
+            "concepto": "Renderizar esta tarea"
+          },
+          {
+            "id_task": 2,
+            "concepto": "Lavar los platos"
+          }
+        ],
+        "completadas": [
+          {
+            "id_task": 1,
+            "concepto": "Tarea C"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "username": "OtroUsuario",
+    "password": "anotherpass",
+    "tareas": [
+      {
+        "incompletas": [
+          {
+            "id_task": 1,
+            "concepto": "Tarea A"
+          },
+          {
+            "id_task": 2,
+            "concepto": "Tarea B"
+          }
+        ],
+        "completadas": [
+          {
+            "id_task": 1,
+            "concepto": "Tarea C"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "username": "Cameron",
+    "password": "H@ltAndC@tchF1r3",
+    "tareas": [
+      {
+        "incompletas": [
+          "Esto es una tarea"
+        ]
+      },
+      {
+        "completadas": []
+      }
+    ]
+  },
+  {
+    "username": "enzofiglioli",
+    "password": "devEnzoF1996",
+    "tareas": [
+      {
+        "incompletas": []
+      },
+      {
+        "completadas": []
+      }
+    ]
+  },
+  {
+    "username": "EnzoF",
+    "password": "1234",
+    "tareas": [
+      {
+        "incompletas": []
+      },
+      {
+        "completadas": []
+      }
+    ]
+  }
+]

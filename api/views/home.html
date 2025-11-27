@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoListo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-teal-50 text-gray-800">
+
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-teal-600">TodoListo</h1>
+            <ul class="flex space-x-6">
+                <li><a href="/register" class="font-medium hover:text-teal-600">Registrate</a></li>
+                <li><a href="/login" class="font-medium hover:text-teal-600">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-r from-teal-500 to-teal-700 text-white text-center py-20 px-4">
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">Organiza tu vida</h1>
+        <p class="text-xl md:text-2xl opacity-90">Gestioná tus tareas fácil, rápido y desde cualquier lugar</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 px-6 py-16 items-center">
+
+        <!-- IMAGE -->
+        <div class="w-full">
+            <img src="./img/rb_3160.png" alt="Imagen destacada" 
+                 class="rounded-2xl shadow-lg w-full h-[450px] object-cover">
+        </div>
+
+        <!-- TEXT BLOCK -->
+        <div class="w-full">
+            <h2 class="text-4xl font-bold text-teal-700 mb-6">Bienvenido a TodoListo</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                Gestioná y organizá tus actividades de forma clara y sencilla. 
+                TodoListo te ayuda a mantenerte enfocado, mejorar tu productividad 
+                y tener tus días bajo control.
+            </p>
+            <button class="px-7 py-3 bg-teal-600 text-white text-lg font-semibold rounded-xl 
+                           shadow-md hover:bg-teal-700 transition-transform transform hover:scale-105">
+                Leer más
+            </button>
+        </div>
+    </div>
+
+    <!-- MOCKUP -->
+    <div class="max-w-5xl mx-auto px-6 mt-10">
+        <img src="./img/mockuper.png" alt="mockup" class="w-full rounded-2xl shadow-lg">
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-100 text-center p-6 mt-14">
+        <p class="text-gray-600">&copy; <script>document.write(new Date().getFullYear())</script> TodoListo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
