@@ -1,14 +1,16 @@
+require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const { join } = require("path");
 const { connectToMongoDB } = require("../config/dbConfigure.js");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+const pathCors = process.env.PATH_CORS 
 
 const middleware = (app) => {
   // Allowed origins: production fixed domain + allow .vercel.app previews + localhost
   const allowedOrigins = [
-    "https://todo-listo-ya.vercel.app",
+    pathCors,
     "http://localhost:3000",
     "http://localhost:8080",
     "http://localhost:5173"
