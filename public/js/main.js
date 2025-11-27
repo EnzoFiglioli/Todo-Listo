@@ -323,6 +323,9 @@ async function deleteAccount() {
     alert("Cuenta eliminada exitosamente");
     window.location.href = "/"
   }
-
+  if(response.msg){
+    alert(response.msg);
+    return
+  }
   alert("Disculpa hubo un error al eliminar cuenta")
 }
