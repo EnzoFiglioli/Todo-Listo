@@ -18,18 +18,7 @@ const middleware = (app) => {
 
   app.use(
     cors({
-      origin: (origin, callback) => {
-        // allow no-origin requests (curl, mobile apps)
-        if (!origin) return callback(null, true);
-        // exact allowed OR any vercel preview
-        if (
-          allowedOrigins.includes(origin) ||
-          origin.endsWith(".vercel.app")
-        ) {
-          return callback(null, true);
-        }
-        return callback(new Error("Not allowed by CORS"));
-      },
+      origin: allowedOrigins,
       credentials: true,
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"]
