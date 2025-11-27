@@ -76,6 +76,7 @@ const logout = (req, res) => {
 const deleteAccount = async (req, res) => {
   try {
     const id = req.user.id;
+    if(id == "6928c87649c8d8003c27b84a") return res.status(203).json({msg: "El usuario de prueba no debe ser eliminado"})      
     const deleteUser = await Usuario.findOneAndDelete({ _id: id });
 
     if (!deleteUser)
