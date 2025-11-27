@@ -313,19 +313,24 @@ fetch(`${URI_PATH}/auth/login`, {
 }
 
 async function deleteAccount() {
-  const option = confirm("Estas seguro que quieres eliminar esta cuenta?");
-
+  const option = confirm("¿Estás seguro que quieres eliminar esta cuenta?");
   if (!option) return;
 
-  const response = await fetch(`${URI_PATH}/auth/delete`, {method:"DELETE", credentials: "include"});
+  try {
+    const response = await fetch(`${URI_PATH}/auth/delete`, {
+      method: "DELETE",
+      credentials: "include"
+    });
 
-  if(response.ok){
-    alert("Cuenta eliminada exitosamente");
-    window.location.href = "/"
+    const data = await response.json(); 
+
+    if (response.ok) {
+      alert(data.msg); 
+      window.location.href = "/";
+    } else {
+      alert(data.msg); 
+    }
+  } catch (err) {
+    alert("Error en la solicitud: " + err.message);
   }
-  if(response.msg){
-    alert(response.msg);
-    return
-  }
-  alert("Disculpa hubo un error al eliminar cuenta")
 }
